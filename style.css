@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #2f362f;
+}
+h1 {
+    color: white;
+    margin-bottom: 20px; /* Spacing between the heading and the clock */
+}
+#time {
+    display: flex;
+    gap: 40px;
+    color: white;
+}
+#time .circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#time .circle svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+#time .circle svg circle {
+    width: 100px;
+    height: 100px;
+    fill: transparent;
+    stroke: #191919;
+    stroke-width: 4;
+    transform: translate(5px, 5px);
+}
+#time .circle svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    transition: stroke-dashoffset 0.5s ease; /* Smooth transition */
+}
+#time div {
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+#time .ap {
+    position: relative;
+    font-size: 1em;
+    transform: translateX(-20px);
+}
